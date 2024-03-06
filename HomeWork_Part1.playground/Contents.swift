@@ -166,6 +166,17 @@ while index < products.count {
     ------------------------------------------------------
  */
 
+var index = 0
+
+repeat {
+    let product = products[index]
+    print("------------------- \(index + 1) -------------------------------")
+    print(" Назва товару: \(product.productName)")
+    print(" Сокет: \(product.socet)")
+    print(" ------------------------------------------------------")
+    
+    index += 1
+} while index < products.count
 
 
 
