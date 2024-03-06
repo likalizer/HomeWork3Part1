@@ -136,6 +136,17 @@ for (index, product) in products.enumerated() {
 
 
 
+var index = 0
+
+while index < products.count {
+    let product = products[index]
+    print("------------------- \(index + 1) -------------------------------")
+    print(" Назва товару: \(product.productName)")
+    print(" Ціна: \(product.price) \(product.currency)")
+    print(" ------------------------------------------------------")
+    
+    index += 1
+}
 
 
 /*
