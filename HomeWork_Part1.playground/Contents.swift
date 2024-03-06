@@ -2,6 +2,95 @@ import UIKit
 
 var greeting = "Hello, playground"
 
+
+/*
+ 
+ Домашнє завдання 3
+ 
+ Частина 1
+ 
+ */
+
+/*
+ 
+ Розділ 1 - Потік керування
+ 
+ - Цикли
+ 
+ */
+
+// Псевдонім для зберігання деталей товару
+typealias ProductInfo = (String, Double, String, String, String)
+
+// Користувач в інтернет-магазині додав наступні товари у кошик,
+// але ще не визначився, яку саме відеократу придбати:
+let cart: [ProductInfo] = [
+    (productName: "ASRock H310CV-HDV", price: 1717.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "Asus Prime H310M-E R2.0", price: 2299.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "Gigabyte H310M H", price: 1939.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "ASRock Q270 PRO BTC+", price: 4599.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "Biostar H310MHP", price: 1698.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "MSI H30M Pro-VDN", price: 1649.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "Asus WS C246 Pro", price: 10979.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "Gigabyte B550 AORUS Elite", price: 5599.0, currency: "₴", socet: "sAM4", processor: "AMD"),
+    (productName: "Asus TUF Gaming B550-Plus", price: 5798.0, currency: "₴", socet: "sAM4", processor: "AMD"),
+    (productName: "Asus TUF Gaming B550M-Plus", price: 4799.0, currency: "₴", socet: "sAM4", processor: "AMD"),
+    (productName: "Gigabyte B550M Aorus Elite", price: 4446.0, currency: "₴", socet: "sAM4", processor: "AMD"),
+    (productName: "Asus TUF Gaming B550-Plus Wi-Fi II", price: 6599.0, currency: "₴", socet: "sAM4", processor: "AMD"),
+    (productName: "Asus ROG Strix B550-A Gaming", price: 6999.0, currency: "₴", socet: "sAM4", processor: "AMD"),
+    (productName: "Asus ROG Strix B550-E Gaming", price: 8703.0, currency: "₴", socet: "sAM4", processor: "AMD")
+]
+
+
+/*
+ 
+ Пункт 1.1
+ 
+ Викороистовуючи цикил For виведіть у консоль усю інформацію про всі товари у наступному форматі:
+ ------------------- порядковий номер товару -------------------------------
+ Назва товару: значення, Ціна: знак валюти і значення
+ Сокет: значення, Процессор: значення
+ ------------------------------------------------------
+ 
+ наприклад:
+    ------------------- 1 -------------------------------
+     Назва товару: ASRock H310CV-HD, Ціна: 1717.00 ₴
+     Сокет: s1151, Процессор: Intel
+    ------------------------------------------------------
+ */
+
+
+
+
+
+let products = [
+    (productName: "ASRock H310CV-HDV",price: 1717.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "Asus Prime H310M-E R2.0", price: 2299.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "Gigabyte H310M H", price: 1939.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "ASRock Q270 PRO BTC+", price: 4599.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "Biostar H310MHP", price: 1698.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "MSI H30M Pro-VDN", price: 1649.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "Asus WS C246 Pro", price: 10979.0, currency: "₴", socet: "s1151", processor: "Intel"),
+    (productName: "Gigabyte B550 AORUS Elite", price: 5599.0, currency: "₴", socet: "sAM4", processor: "AMD"),
+    (productName: "Asus TUF Gaming B550-Plus", price: 5798.0, currency: "₴", socet: "sAM4", processor: "AMD"),
+    (productName: "Asus TUF Gaming B550M-Plus", price: 4799.0, currency: "₴", socet: "sAM4", processor: "AMD"),
+    (productName: "Gigabyte B550M Aorus Elite", price: 4446.0, currency: "₴", socet: "sAM4", processor: "AMD"),
+    (productName: "Asus TUF Gaming B550-Plus Wi-Fi II", price: 6599.0, currency: "₴", socet: "sAM4", processor: "AMD"),
+    (productName: "Asus ROG Strix B550-A Gaming", price: 6999.0, currency: "₴", socet: "sAM4", processor: "AMD"),
+    (productName: "Asus ROG Strix B550-E Gaming", price: 8703.0, currency: "₴", socet: "sAM4", processor: "AMD")
+]
+
+for (index, product) in products.enumerated() {
+    print(" -------------------- \(index + 1) -----------------")
+    print(" Назва товару: \(product.productName), Ціна: \(product.price) \(product.currency)")
+    print(" Сокет: \(product.socet). Процессор: \(product.processor)")
+    print("----------------------------------------")
+    
+}
+
+
+
+
 /*
  
  Пункт 1.2
