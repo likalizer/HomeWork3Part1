@@ -62,7 +62,6 @@ let cart: [ProductInfo] = [
 
 
 
-
 let products = [
     (productName: "ASRock H310CV-HDV",price: 1717.0, currency: "₴", socet: "s1151", processor: "Intel"),
     (productName: "Asus Prime H310M-E R2.0", price: 2299.0, currency: "₴", socet: "s1151", processor: "Intel"),
@@ -110,6 +109,12 @@ for (index, product) in products.enumerated() {
 
 
 
+for (index, product) in products.enumerated() {
+    print("------------------- \(index + 1) -------------------------------")
+    print(" Назва товару: \(product.productName)")
+    print(" Процессор: \(product.processor)")
+    print(" ------------------------------------------------------")
+}
 
 
 /*
