@@ -534,8 +534,6 @@ for (index, product) in cart.enumerated() {
     print("Валюта моя: \(myCurrency.rawValue)")
 
 
-
-
 /*
  
  Розділ 4 - Структури і класи
@@ -555,6 +553,29 @@ for (index, product) in cart.enumerated() {
  
  */
 
+
+    enum ProcessorType: String {
+        case intel = "Intel"
+        case amd = "AMD"
+    }
+
+    struct MotherBoard {
+        var socket: String
+        var processor: ProcessorType
+    }
+
+    
+    var myMotherBoard = MotherBoard(socket: "AM4", processor: .amd)
+
+   
+    print("Початкова материнська плата: Socket - \(myMotherBoard.socket), Processor - \(myMotherBoard.processor.rawValue)")
+
+    
+    myMotherBoard.socket = "LGA1200"
+    myMotherBoard.processor = .intel
+
+   
+    print("Оновлена материнська плата: Socket - \(myMotherBoard.socket), Processor - \(myMotherBoard.processor.rawValue)")
 
 
 
