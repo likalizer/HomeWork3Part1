@@ -401,10 +401,33 @@ for (index, product) in cart.enumerated() {
  */
 
 
+    typealias ProductInfo = (productName: String, processor: String)
 
 
+    let products: [ProductInfo] = [
+        (productName: "ASRock H310CV-HD", processor: "Intel"),
+        (productName: "ASRock B450M HDV", processor: "AMD"),
+        (productName: "Gigabyte B450M DS3H", processor: "AMD"),
+        (productName: "ASUS PRIME Z390-P", processor: "Intel"),
+        (productName: "Asus Prime H310M-E R2.0", processor: "Intel"),
+        (productName: "Asus WS C246 Pro", processor: "Intel")
+    ]
 
+   
+    func printIntelProducts(maxPrice: Double) {
+    print ("------------- Товари з ціною менше значення \(maxPrice) ----------------")
+        
+            var productNumber = 1
+            for product in products {
+                if product.price < maxPrice {
+                    print("\(productNumber) Назва товару: \(product.productName), Ціна: \(product.price) ₴")
+                    productNumber += 1
+                }
+            }
+            print("------------------------------------------------------")
+        }
 
+        printProductsLessThan(maxPrice: 4500.0)
 /*
  
  Пункт 2.3
