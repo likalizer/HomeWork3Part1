@@ -225,126 +225,126 @@ let cart: [ProductInfo] = [
 for (index, product) in cart.enumerated() {
     if productPrice < 5000.0 && product.socket = s1151 {
         print("------------------- \(index + 1) -------------------------------")
-               print("Назва товару: \(product.productName), Ціна: \(product.price) ₴")
-               print("Сокет: \(product.socket)")
-               print("------------------------------------------------------")
+        print("Назва товару: \(product.productName), Ціна: \(product.price) ₴")
+        print("Сокет: \(product.socket)")
+        print("------------------------------------------------------")
         
-           } else {
-               
-    print ("Не соответсвует требованию ")
-}
-
-/*
- 
- Розділ 1 - Потік керування
- 
- - Switch
- 
- */
-
-/*
- 
- Пункт 1.6
- 
- Викороистовуючи будь-який з циклів та умовні оператор switch
- додати перевірку через case на відповідність процесору товару AMD чи Intel,
- значення процесору брати з опису товару
- (дивись Примітка після прикладу приклад switch) і
- вивести у консоль наступну інформацію про всі товари
- - назва товару
- - ціна товару
- у наступному форматі:
- ------------------- порядковий номер товару -------------------------------
- Назва товару: значення, Ціна: знак валюти і значення
- ------------------------------------------------------
- 
- наприклад:
-    ------------------- 1 -------------------------------
-     Назва товару: ASRock H310CV-HD, Ціна: 1717.00 ₴
-    ------------------------------------------------------
-
- * Примітка
+    } else {
+        
+        print ("Не соответсвует требованию ")
+    }
     
+    /*
+     
+     Розділ 1 - Потік керування
+     
+     - Switch
+     
+     */
+    
+    /*
+     
+     Пункт 1.6
+     
+     Викороистовуючи будь-який з циклів та умовні оператор switch
+     додати перевірку через case на відповідність процесору товару AMD чи Intel,
+     значення процесору брати з опису товару
+     (дивись Примітка після прикладу приклад switch) і
+     вивести у консоль наступну інформацію про всі товари
+     - назва товару
+     - ціна товару
+     у наступному форматі:
+     ------------------- порядковий номер товару -------------------------------
+     Назва товару: значення, Ціна: знак валюти і значення
+     ------------------------------------------------------
+     
+     наприклад:
+     ------------------- 1 -------------------------------
+     Назва товару: ASRock H310CV-HD, Ціна: 1717.00 ₴
+     ------------------------------------------------------
+     
+     * Примітка
+     
      let processorStringValue = "Значення процесору з продукту"
- 
+     
      switch processorStringValue {
      case "Intel":
-         // друк інформації для товару з процесором Intel
+     // друк інформації для товару з процесором Intel
      case "AMD":
-         // друк інформації для товару з процесором AMD
+     // друк інформації для товару з процесором AMD
      default:
-         // друк пустої строки
+     // друк пустої строки
      }
+     
+     */
     
- */
-
     print("\nProcessor check: \n")
-
+    
     typealias ProductInfo = (productName: String, price: Double, processor: String)
-
+    
     let products: [ProductInfo] = [
         (productName: "ASRock H310CV-HD", price: 1710.0, processor: "Intel"),
         (productName: "ASRock B450M HDV", price: 2050.0, processor: "AMD"),
         (productName: "Gigabyte B450M DS3H", price: 2500.0, processor: "AMD"),
         (productName: "ASUS PRIME Z390-P", price: 1221.0, processor: "Intel")
     ]
-
-
+    
+    
     for (index, product) in products.enumerated() {
         switch product.processor {
-           case "Intel", "AMD":
-               print("------------------- \(index + 1) -------------------------------")
-               print("Назва товару: \(product.productName), Ціна: \(product.price) ₴")
-        
-           default:
-               print("Продукт з невідомим типом процесора: \(product.productName)")
-           }
-           print("------------------------------------------------------")
-       }
+        case "Intel", "AMD":
+            print("------------------- \(index + 1) -------------------------------")
+            print("Назва товару: \(product.productName), Ціна: \(product.price) ₴")
+            
+        default:
+            print("Продукт з невідомим типом процесора: \(product.productName)")
+        }
+        print("------------------------------------------------------")
+    }
     
     
-
-
-/*
- 
- Розділ 2 - Функції
- 
- */
-
-/*
- 
- Пункт 2.1
- 
- ! Для вирішення наступною задачі використовуйте будь-які цикли та інструменти.
- 
- Зарезервувати (описати) функцію без параметрів,
- яка виведе інформацю про товари з кошика тільки з процесором Intel
- у консоль у наступному форматі:
- 
- ------------------- Inetel -------------------------------
- 1 Назва товару: значення товару
- 2 Назва товару: значення товару
- 3 Назва товару: значення товару
- ...
- n Назва товару: значення товару // n - номер останнього товару
- ------------------------------------------------------
- 
- наприклад:
-    ------------------- Inetel -------------------------------
-    1 Назва товару: ASRock H310CV-HD
-    2 Назва товару: Asus Prime H310M-E R2.0
-    ...
-    n Назва товару: Asus WS C246 Pro // n - номер останнього товару
-    ------------------------------------------------------
- 
- !! не забудьте перевірити роботу функції викликавши її
- 
- */
-
-
+    
+    
+    /*
+     
+     Розділ 2 - Функції
+     
+     */
+    
+    /*
+     
+     Пункт 2.1
+     
+     ! Для вирішення наступною задачі використовуйте будь-які цикли та інструменти.
+     
+     Зарезервувати (описати) функцію без параметрів,
+     яка виведе інформацю про товари з кошика тільки з процесором Intel
+     у консоль у наступному форматі:
+     
+     ------------------- Inetel -------------------------------
+     1 Назва товару: значення товару
+     2 Назва товару: значення товару
+     3 Назва товару: значення товару
+     ...
+     n Назва товару: значення товару // n - номер останнього товару
+     ------------------------------------------------------
+     
+     наприклад:
+     ------------------- Inetel -------------------------------
+     1 Назва товару: ASRock H310CV-HD
+     2 Назва товару: Asus Prime H310M-E R2.0
+     ...
+     n Назва товару: Asus WS C246 Pro // n - номер останнього товару
+     ------------------------------------------------------
+     
+     !! не забудьте перевірити роботу функції викликавши її
+     
+     */
+    
+    
     typealias ProductInfo = (productName: String, processor: String)
-
-
+    
+    
     let products: [ProductInfo] = [
         (productName: "ASRock H310CV-HD", processor: "Intel"),
         (productName: "ASRock B450M HDV", processor: "AMD"),
@@ -353,8 +353,8 @@ for (index, product) in cart.enumerated() {
         (productName: "Asus Prime H310M-E R2.0", processor: "Intel"),
         (productName: "Asus WS C246 Pro", processor: "Intel")
     ]
-
-   
+    
+    
     func printIntelProducts() {
         print("------------------- Intel -------------------------------")
         var productNumber = 1
@@ -367,43 +367,43 @@ for (index, product) in cart.enumerated() {
         print("------------------------------------------------------")
     }
     printIntelProducts()
-
-
-
-
-/*
- 
- Пункт 2.2
- 
- ! Для вирішення наступною задачі використовуйте будь-які цикли та інструменти.
- 
- Зарезервувати (описати) функцію з параметром максимальна ціна (maxPrice: Double),
- яка виведе інформацю про товари з кошика тільки з ціною, яка менше за значення maxPrice
- у консоль у наступному форматі:
- 
- ------------------- Товари з ціною менше значення -------------------------------
- 1 Назва товару: значення, Ціна: знак валюти і значення
- 2 Назва товару: значення, Ціна: знак валюти і значення
- 3 Назва товару: значення, Ціна: знак валюти і значення
- ...
- n Назва товару: значення, Ціна: знак валюти і значення // n - номер останнього товару
- ------------------------------------------------------
- ООООО
- наприклад:
-    ------------------- Товари з ціною менше 4500.00 -------------------------------
-    1 Назва товару: ASRock H310CV-HD, Ціна: 1717.00 ₴
-    ...
-    n Назва товару: Asus WS C246 Pro, Ціна: 2299.0// n - номер останнього товару
-    ------------------------------------------------------
- 
- !! не забудьте перевірити роботу функції викликавши її з максимальним значенням на свій розсуд для перевірки
- 
- */
-
-
+    
+    
+    
+    
+    /*
+     
+     Пункт 2.2
+     
+     ! Для вирішення наступною задачі використовуйте будь-які цикли та інструменти.
+     
+     Зарезервувати (описати) функцію з параметром максимальна ціна (maxPrice: Double),
+     яка виведе інформацю про товари з кошика тільки з ціною, яка менше за значення maxPrice
+     у консоль у наступному форматі:
+     
+     ------------------- Товари з ціною менше значення -------------------------------
+     1 Назва товару: значення, Ціна: знак валюти і значення
+     2 Назва товару: значення, Ціна: знак валюти і значення
+     3 Назва товару: значення, Ціна: знак валюти і значення
+     ...
+     n Назва товару: значення, Ціна: знак валюти і значення // n - номер останнього товару
+     ------------------------------------------------------
+     ООООО
+     наприклад:
+     ------------------- Товари з ціною менше 4500.00 -------------------------------
+     1 Назва товару: ASRock H310CV-HD, Ціна: 1717.00 ₴
+     ...
+     n Назва товару: Asus WS C246 Pro, Ціна: 2299.0// n - номер останнього товару
+     ------------------------------------------------------
+     
+     !! не забудьте перевірити роботу функції викликавши її з максимальним значенням на свій розсуд для перевірки
+     
+     */
+    
+    
     typealias ProductInfo = (productName: String, processor: String)
-
-
+    
+    
     let products: [ProductInfo] = [
         (productName: "ASRock H310CV-HD", processor: "Intel"),
         (productName: "ASRock B450M HDV", processor: "AMD"),
@@ -412,192 +412,236 @@ for (index, product) in cart.enumerated() {
         (productName: "Asus Prime H310M-E R2.0", processor: "Intel"),
         (productName: "Asus WS C246 Pro", processor: "Intel")
     ]
-
-   
+    
+    
     func printIntelProducts(maxPrice: Double) {
-    print ("------------- Товари з ціною менше значення \(maxPrice) ----------------")
+        print ("------------- Товари з ціною менше значення \(maxPrice) ----------------")
         
-            var productNumber = 1
-            for product in products {
-                if product.price < maxPrice {
-                    print("\(productNumber) Назва товару: \(product.productName), Ціна: \(product.price) ₴")
-                    productNumber += 1
-                }
+        var productNumber = 1
+        for product in products {
+            if product.price < maxPrice {
+                print("\(productNumber) Назва товару: \(product.productName), Ціна: \(product.price) ₴")
+                productNumber += 1
             }
-            print("------------------------------------------------------")
         }
-
-        printProductsLessThan(maxPrice: 4500.0)
-/*
- 
- Пункт 2.3
- 
- ! Для вирішення наступною задачі використовуйте будь-які цикли та інструменти.
- 
- Зарезервувати (описати) функцію яка приймає параметром тип процесору (processor: String),
- та повертає найдорожчий товар (тобто поіністю елемент типу ProductInfo) з вказаним процесором processor
- 
- результат записати у константу та вивести у консоль у форматі:
- ------------------- Найдорожчий товар за процесором значення -------------------------------
- Назва товару: значення, Ціна: знак валюти і значення
- ------------------------------------------------------
- 
- наприклад:
- 
+        print("------------------------------------------------------")
+    }
+    
+    printProductsLessThan(maxPrice: 4500.0)
+    /*
+     
+     Пункт 2.3
+     
+     ! Для вирішення наступною задачі використовуйте будь-які цикли та інструменти.
+     
+     Зарезервувати (описати) функцію яка приймає параметром тип процесору (processor: String),
+     та повертає найдорожчий товар (тобто поіністю елемент типу ProductInfo) з вказаним процесором processor
+     
+     результат записати у константу та вивести у консоль у форматі:
+     ------------------- Найдорожчий товар за процесором значення -------------------------------
+     Назва товару: значення, Ціна: знак валюти і значення
+     ------------------------------------------------------
+     
+     наприклад:
+     
      ------------------- Найдорожчий товар за процесором Intel -------------------------------
      Назва товару: Asus WS C246 Pro, Ціна: 10979.00 ₴
      -----------------------------------------------------------------------------------------
- 
- */
-
-
-           typealias ProductInfo = (productName: String, price: Double, processor: String)
-
-           let products: [ProductInfo] = [
-               (productName: "ASRock H310CV-HD", price: 1710.0, processor: "Intel"),
-               (productName: "ASRock B450M HDV", price: 2050.0, processor: "AMD"),
-               (productName: "Gigabyte B450M DS3H", price: 2500.0, processor: "AMD"),
-               (productName: "ASUS PRIME Z390-P", price: 1221.0, processor: "Intel"),
-               (productName: "Asus Prime H310M-E R2.0", price: 1899.0, processor: "Intel"),
-               (productName: "Asus WS C246 Pro", price: 10979.0, processor: "Intel")
-           ]
-
-           func findMostExpensiveProduct(withProcessor processor: String) -> ProductInfo? {
-               let filteredProducts = products.filter { $0.processor == processor }
-               let mostExpensiveProduct = filteredProducts.max { $0.price < $1.price }
-               return mostExpensiveProduct
-           }
-
-
-           if let mostExpensiveIntelProduct = findMostExpensiveProduct(withProcessor: "Intel") {
-               print("------------------- Найдорожчий товар за процесором \(mostExpensiveIntelProduct.processor) -------------------------------")
-               print("Назва товару: \(mostExpensiveIntelProduct.productName), Ціна: \(mostExpensiveIntelProduct.price) ₴")
-               print("-----------------------------------------------------------------------------------------")
-           } else {
-               print("Товари з вказаним процесором не знайдені.")
-           }
-
-/*
- 
- Розділ 3 - Перечислення / Enum
- 
- */
-
-/*
- 
- Пункт 3.1
- 
- Зарезервувати (описати) enum для типу процесора ProcessorType, який матиме 2 випадки (cases) з тестовим описом
- - intel = "Intel"
- - amd = "AMD"
- 
- створити змінну типу створенного enum з якимось із значень
- 
- */
-
-
+     
+     */
+    
+    
+    typealias ProductInfo = (productName: String, price: Double, processor: String)
+    
+    let products: [ProductInfo] = [
+        (productName: "ASRock H310CV-HD", price: 1710.0, processor: "Intel"),
+        (productName: "ASRock B450M HDV", price: 2050.0, processor: "AMD"),
+        (productName: "Gigabyte B450M DS3H", price: 2500.0, processor: "AMD"),
+        (productName: "ASUS PRIME Z390-P", price: 1221.0, processor: "Intel"),
+        (productName: "Asus Prime H310M-E R2.0", price: 1899.0, processor: "Intel"),
+        (productName: "Asus WS C246 Pro", price: 10979.0, processor: "Intel")
+    ]
+    
+    func findMostExpensiveProduct(withProcessor processor: String) -> ProductInfo? {
+        let filteredProducts = products.filter { $0.processor == processor }
+        let mostExpensiveProduct = filteredProducts.max { $0.price < $1.price }
+        return mostExpensiveProduct
+    }
+    
+    
+    if let mostExpensiveIntelProduct = findMostExpensiveProduct(withProcessor: "Intel") {
+        print("------------------- Найдорожчий товар за процесором \(mostExpensiveIntelProduct.processor) -------------------------------")
+        print("Назва товару: \(mostExpensiveIntelProduct.productName), Ціна: \(mostExpensiveIntelProduct.price) ₴")
+        print("-----------------------------------------------------------------------------------------")
+    } else {
+        print("Товари з вказаним процесором не знайдені.")
+    }
+    
+    /*
+     
+     Розділ 3 - Перечислення / Enum
+     
+     */
+    
+    /*
+     
+     Пункт 3.1
+     
+     Зарезервувати (описати) enum для типу процесора ProcessorType, який матиме 2 випадки (cases) з тестовим описом
+     - intel = "Intel"
+     - amd = "AMD"
+     
+     створити змінну типу створенного enum з якимось із значень
+     
+     */
+    
+    
     enum ProcessorType: String {
         case intel = "Intel"
         case amd = "AMD"
     }
-
+    
     var myProcessorType = ProcessorType.intel
-
-
+    
+    
     if let anotherProcessorType = ProcessorType(rawValue: "AMD") {
         print("Створено новий процесор типу: \(anotherProcessorType.rawValue)")
     }
-
-
-
-/*
- 
- Пункт 3.2
- 
- Зарезервувати (описати) enum для валюти (Currency), який матиме 3 випадки (cases) з тестовим описом
- - uah = "UAH"
- - usd = "USD"
- - eur = "EUR"
- 
- створити змінну типу створенного enum з якимось із значень
- 
- */
-
+    
+    
+    
+    /*
+     
+     Пункт 3.2
+     
+     Зарезервувати (описати) enum для валюти (Currency), який матиме 3 випадки (cases) з тестовим описом
+     - uah = "UAH"
+     - usd = "USD"
+     - eur = "EUR"
+     
+     створити змінну типу створенного enum з якимось із значень
+     
+     */
+    
     enum Currency: String {
         case uah = "UAH"
         case usd = "USD"
         case eur = "EUR"
     }
-
-
+    
+    
     var myCurrency = Currency.usd
     print("Валюта моя: \(myCurrency.rawValue)")
-
-
-/*
- 
- Розділ 4 - Структури і класи
- 
- */
-
-/*
- 
- Пункт 4.1
-
- Описати структуру MotherBoard (Материньска плата)
- з наступними полями (змінними із будь-якими параметрами за замовчуванням):
- - socet типу String
- - processor типу ProcessorType (enum, оголошений у розділі Перечислення)
- 
- створити змінну типу MotherBoard і спробувати поміняти їй інші значення
- 
- */
-
-
+    
+    
+    /*
+     
+     Розділ 4 - Структури і класи
+     
+     */
+    
+    /*
+     
+     Пункт 4.1
+     
+     Описати структуру MotherBoard (Материньска плата)
+     з наступними полями (змінними із будь-якими параметрами за замовчуванням):
+     - socet типу String
+     - processor типу ProcessorType (enum, оголошений у розділі Перечислення)
+     
+     створити змінну типу MotherBoard і спробувати поміняти їй інші значення
+     
+     */
+    
+    
     enum ProcessorType: String {
         case intel = "Intel"
         case amd = "AMD"
     }
-
+    
     struct MotherBoard {
         var socket: String
         var processor: ProcessorType
     }
-
+    
     
     var myMotherBoard = MotherBoard(socket: "AM4", processor: .amd)
-
-   
+    
+    
     print("Початкова материнська плата: Socket - \(myMotherBoard.socket), Processor - \(myMotherBoard.processor.rawValue)")
-
+    
     
     myMotherBoard.socket = "LGA1200"
     myMotherBoard.processor = .intel
-
-   
+    
+    
     print("Оновлена материнська плата: Socket - \(myMotherBoard.socket), Processor - \(myMotherBoard.processor.rawValue)")
-
-
-
-
-
-/*
- 
- Пункт 4.2
-
- Описати клас Product (опис продукту)
- з наступними полями (змінними із будь-якими параметрами за замовчуванням):
- - name типу String
- - price типу Double
- - currency типу Currency (використати enum з розділу 3 пункт 3.2)
- - motherBoard типу MotherBoard (використати структуру MotherBoard з розділу 4 пункт 4.1)
- 
- створити змінну типу Product і спробувати поміняти їй інші значення
- 
- */
-
-
-
+    
+    
+    
+    
+    
+    /*
+     
+     Пункт 4.2
+     
+     Описати клас Product (опис продукту)
+     з наступними полями (змінними із будь-якими параметрами за замовчуванням):
+     - name типу String
+     - price типу Double
+     - currency типу Currency (використати enum з розділу 3 пункт 3.2)
+     - motherBoard типу MotherBoard (використати структуру MotherBoard з розділу 4 пункт 4.1)
+     
+     створити змінну типу Product і спробувати поміняти їй інші значення
+     
+     */
+    
+    enum Currency: String {
+        case uah = "UAH"
+        case usd = "USD"
+        case eur = "EUR"
+    }
+    
+    enum ProcessorType: String {
+        case intel = "Intel"
+        case amd = "AMD"
+    }
+    
+    struct MotherBoard {
+        var socket: String
+        var processor: ProcessorType
+    }
+    
+    class Product {
+        var name: String
+        var price: Double
+        var currency: Currency
+        var motherBoard: MotherBoard
+        
+        
+        init(name: String, price: Double, currency: Currency, motherBoard: MotherBoard) {
+            self.name = name
+            self.price = price
+            self.currency = currency
+            self.motherBoard = motherBoard
+        }
+    }
+    
+    
+    var myProduct = Product(name: "Gaming PC", price: 1500.0, currency: .usd, motherBoard: MotherBoard(socket: "AM4", processor: .amd))
+    
+    
+    print("Продукт: \(myProduct.name), Ціна: \(myProduct.price) \(myProduct.currency.rawValue), Материнська плата: Socket \(myProduct.motherBoard.socket), Processor \(myProduct.motherBoard.processor.rawValue)")
+    
+    
+    myProduct.name = "Professional Gaming PC"
+    myProduct.price = 2000.0
+    myProduct.currency = .eur
+    myProduct.motherBoard = MotherBoard(socket: "LGA1200", processor: .intel)
+    
+    print("Оновлений продукт: \(myProduct.name), Ціна: \(myProduct.price) \(myProduct.currency.rawValue), Материнська плата: Socket \(myProduct.motherBoard.socket), Processor \(myProduct.motherBoard.processor.rawValue)")
+    
+   }  
 
 
 
