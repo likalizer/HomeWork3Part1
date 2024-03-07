@@ -172,7 +172,7 @@ repeat {
     let product = products[index]
     print("------------------- \(index + 1) -------------------------------")
     print(" Назва товару: \(product.productName)")
-    print(" Сокет: \(product.socet)")
+    print(" Сокет: \(product.socket)")
     print(" ------------------------------------------------------")
     
     index += 1
@@ -210,9 +210,29 @@ repeat {
     ------------------------------------------------------
  */
 
+print("\nif else: \n")
 
+typealias ProductInfo = (productName: String, price: Double, socket: String)
 
+let cart: [ProductInfo] = [
+    (productName: "ASRock H310CV-HD", price: 1710.0, socket: s1151),
+    (productName: "ASRock H310CV-HD", price: 2050.0, socket: s1151),
+    (productName: "ASRock H310CV-HD", price: 6465.0, socket: m3452),
+    (productName: "ASRock H310CV-HD", price: 1221.0, socket: l1541)
+    
+    ]
 
+for (index, product) in cart.enumerated() {
+    if productPrice < 5000.0 && product.socket = s1151 {
+        print("------------------- \(index + 1) -------------------------------")
+               print("Назва товару: \(product.productName), Ціна: \(product.price) ₴")
+               print("Сокет: \(product.socket)")
+               print("------------------------------------------------------")
+        
+           } else {
+               
+    print ("Не соответсвует требованию ")
+}
 
 /*
  
