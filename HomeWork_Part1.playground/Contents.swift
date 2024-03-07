@@ -510,7 +510,6 @@ for (index, product) in cart.enumerated() {
 
 
 
-
 /*
  
  Пункт 3.2
@@ -524,6 +523,15 @@ for (index, product) in cart.enumerated() {
  
  */
 
+    enum Currency: String {
+        case uah = "UAH"
+        case usd = "USD"
+        case eur = "EUR"
+    }
+
+
+    var myCurrency = Currency.usd
+    print("Валюта моя: \(myCurrency.rawValue)")
 
 
 
