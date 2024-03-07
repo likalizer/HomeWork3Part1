@@ -496,6 +496,17 @@ for (index, product) in cart.enumerated() {
  */
 
 
+    enum ProcessorType: String {
+        case intel = "Intel"
+        case amd = "AMD"
+    }
+
+    var myProcessorType = ProcessorType.intel
+
+
+    if let anotherProcessorType = ProcessorType(rawValue: "AMD") {
+        print("Створено новий процесор типу: \(anotherProcessorType.rawValue)")
+    }
 
 
 
