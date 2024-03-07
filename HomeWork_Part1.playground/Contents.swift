@@ -278,6 +278,31 @@ for (index, product) in cart.enumerated() {
     
  */
 
+    print("\nProcessor check: \n")
+
+    typealias ProductInfo = (productName: String, price: Double, processor: String)
+
+    let products: [ProductInfo] = [
+        (productName: "ASRock H310CV-HD", price: 1710.0, processor: "Intel"),
+        (productName: "ASRock B450M HDV", price: 2050.0, processor: "AMD"),
+        (productName: "Gigabyte B450M DS3H", price: 2500.0, processor: "AMD"),
+        (productName: "ASUS PRIME Z390-P", price: 1221.0, processor: "Intel")
+    ]
+
+
+    for (index, product) in products.enumerated() {
+        switch product.processor {
+           case "Intel", "AMD":
+               print("------------------- \(index + 1) -------------------------------")
+               print("Назва товару: \(product.productName), Ціна: \(product.price) ₴")
+        
+           default:
+               print("Продукт з невідомим типом процесора: \(product.productName)")
+           }
+           print("------------------------------------------------------")
+       }
+    
+    
 
 
 /*
