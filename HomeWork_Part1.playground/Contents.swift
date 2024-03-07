@@ -451,8 +451,31 @@ for (index, product) in cart.enumerated() {
  */
 
 
+           typealias ProductInfo = (productName: String, price: Double, processor: String)
+
+           let products: [ProductInfo] = [
+               (productName: "ASRock H310CV-HD", price: 1710.0, processor: "Intel"),
+               (productName: "ASRock B450M HDV", price: 2050.0, processor: "AMD"),
+               (productName: "Gigabyte B450M DS3H", price: 2500.0, processor: "AMD"),
+               (productName: "ASUS PRIME Z390-P", price: 1221.0, processor: "Intel"),
+               (productName: "Asus Prime H310M-E R2.0", price: 1899.0, processor: "Intel"),
+               (productName: "Asus WS C246 Pro", price: 10979.0, processor: "Intel")
+           ]
+
+           func findMostExpensiveProduct(withProcessor processor: String) -> ProductInfo? {
+               let filteredProducts = products.filter { $0.processor == processor }
+               let mostExpensiveProduct = filteredProducts.max { $0.price < $1.price }
+               return mostExpensiveProduct
+           }
 
 
+           if let mostExpensiveIntelProduct = findMostExpensiveProduct(withProcessor: "Intel") {
+               print("------------------- Найдорожчий товар за процесором \(mostExpensiveIntelProduct.processor) -------------------------------")
+               print("Назва товару: \(mostExpensiveIntelProduct.productName), Ціна: \(mostExpensiveIntelProduct.price) ₴")
+               print("-----------------------------------------------------------------------------------------")
+           } else {
+               print("Товари з вказаним процесором не знайдені.")
+           }
 
 /*
  
